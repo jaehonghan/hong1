@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'ChosunCentennial';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ChosunCentennial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ownglyph_ParkDaHyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{margin: 0;padding: 0;}
+a{color: #333;text-decoration: none;}
+li {list-style: none;}
+table {border-collapse: collapse; }
+body {font-family: 'Ownglyph_ParkDaHyun';}
+caption {font-size: 0; color: transparent; text-indent: -9999px;position: absolute;left: -99999px; height: 0;overflow: hidden;}
+
+html, body {height: 100%;}
+
+
+#wrap {background: url(../img/background2.png)no-repeat;width: 100%; height: 100vh;background-size: cover;position: relative; animation: dd 2s 1;}
+
+
+#wrap::before {content: "";background: url(../img/background1.png) no-repeat;width: 100%;height: 100vh;position: absolute;top: 10%;background-size: cover;  animation: dd 2s forwards;}
+@keyframes dd {
+    to {transform: scale(1);}
+    from {transform: scale(1.5)}
+}
+
+header {width: 80%; height: 50px; border-radius: 50px; background: rgba(255, 255, 255, 0.8); margin: 50px auto;position: absolute;left: 50%;top: 50px; transform: translateX(-50%); display: flex; justify-content: space-between;align-items: center; backdrop-filter: blur(5px); opacity: 0.6;transition: 0.2s; z-index: 2;}
+header:hover {opacity: 1;}
+
+header h1 {width: 200px;font-size: 50px;padding-left: 100px;}
+header audio {width: 100px;transition: 1s;}
+header audio:hover {width: 400px;}
+header nav {width: 800px;}
+header nav .gnb {display: flex;}
+header nav ul li {width: 20%;flex-grow: 1;font-size: 18px;text-align: center;border-right: 1px solid #ddd;}
+header nav ul li:last-child {border: 0;}
+header nav ul li a{}
+
+.textbox {position: absolute;right: 15%;top: 45%; transform: translateY(-50%); font-size: 50px;color: #fff; display: flex;gap: 50px;flex-direction: row-reverse; height: 50%;font-family: 'ChosunCentennial';
+transform-style: preserve-3d; perspective: 800px; z-index: 1;}
+.textbox ul {}
+.textbox ul li{height: 50px;  animation:merong 5s forwards;opacity: 0; }
+.textbox ul li.q{margin-bottom: 30px;}
+@keyframes merong{
+    0%{opacity: 0; left: -100px; transform: rotate(20deg) rotateY(90deg); color: #000;}
+    /* 20%{opacity: 0.2;}
+    40%{opacity: 0.4;}
+    60%{opacity: 0.6;}
+    80%{opacity: 0.8;} */
+    100%{opacity: 1; left: 0; transform: rotate(0) rotateY();color: #fff;}
+}
+
+.textbox ul:nth-child(1) li:nth-child(1){animation-delay: 0s;}
+.textbox ul:nth-child(1) li:nth-child(2){animation-delay: 0.1s;}
+.textbox ul:nth-child(1) li:nth-child(3){animation-delay: 0.2s;}
+.textbox ul:nth-child(1) li:nth-child(4){animation-delay: 0.3s;}
+.textbox ul:nth-child(1) li:nth-child(5){animation-delay: 0.4s;}
+.textbox ul:nth-child(1) li:nth-child(6){animation-delay: 0.5s;}
+.textbox ul:nth-child(1) li:nth-child(7){animation-delay: 0.6s;}
+
+.textbox ul:nth-child(2) :nth-child(1){animation-delay: 0.7s;}
+.textbox ul:nth-child(2) :nth-child(2){animation-delay: 0.8s;}
+.textbox ul:nth-child(2) :nth-child(3){animation-delay: 0.9s;}
+.textbox ul:nth-child(2) :nth-child(4){animation-delay: 1s;}
+.textbox ul:nth-child(2) :nth-child(5){animation-delay: 1.1s;}
+.textbox ul:nth-child(2) :nth-child(6){animation-delay: 1.2s;}
+.textbox ul:nth-child(2) :nth-child(7){animation-delay: 1.3s;}
+.textbox ul:nth-child(2) :nth-child(8){animation-delay: 1.4s;}
+.textbox ul:nth-child(2) :nth-child(9){animation-delay: 1.5s;}
+.textbox ul:nth-child(2) :nth-child(10){animation-delay: 1.6s;}
+
+.textbox ul:nth-child(3) :nth-child(1){animation-delay: 1.7s;}
+.textbox ul:nth-child(3) :nth-child(2){animation-delay: 1.8s;}
+.textbox ul:nth-child(3) :nth-child(3){animation-delay: 1.9s;}
+.textbox ul:nth-child(3) :nth-child(4){animation-delay: 2s;}
+.textbox ul:nth-child(3) :nth-child(5){animation-delay: 2.1s;}
+.textbox ul:nth-child(3) :nth-child(6){animation-delay: 2.2s;}
+
+.lightbox {}
+/* .lightbox .light {position: absolute; width: 100%;height: 100%; background: url(../img/Layer\ 4.png)no-repeat; animation: light 1s infinite linear reverse;} */
+/* @keyframes light2{
+    to{background-position: 0 0; transform: rotate(-30deg);}
+    from{background-position: 1000px 300px;}
+} */
+/* @keyframes light{
+    to{background-position: 0 0;transform: rotate(30deg); transform-origin: left;}
+    from{background-position: 2000px 1000px;transform: translateX(30%);}
+} */
+.lightbox .light2 {position: absolute; width: 100%;height: 100%; background: url(../img/lightning.png)no-repeat; animation: light2 0.1s infinite linear reverse;}
+
+@keyframes light2{
+    to{background-position: 0 0; transform:;}
+    from{background-position: 1000px 300px;}
+}
+
+/* .lightbox .light3 {position: absolute; width: 100%;height: 100%; background: url(../img/Layer\ 4.png)no-repeat center center; animation: light3 1s infinite linear;}
+
+@keyframes light3{
+    to{background-position: 0 0; }
+    from{background-position: 1200px 500px;}
+} */
